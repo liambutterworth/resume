@@ -1,0 +1,121 @@
+/**
+ * Resume
+ *
+ * :: Reset
+ * :: Page
+ * :: Layout
+ * :: Typography
+ */
+
+@import 'assets/styles/variables';
+@import 'assets/styles/breakpoint';
+@import 'assets/styles/baseline';
+
+/**
+ * Reset
+ */
+
+* {
+	border: 0;
+	margin: 0;
+	padding: 0;
+
+	&, &::before, &::after {
+		box-sizing: border-box;
+	}
+}
+
+/**
+ * Page
+ */
+
+@page {
+	size: 8.5in 11in;
+	margin: 1in;
+}
+
+/**
+ * Layout
+ */
+
+body > header,
+body > main {
+	width: $breakpoint-large;
+	margin: 0 auto;
+}
+
+body > header {
+	$height: 100px;
+	height: $height;
+	h1, ul { display: inline-block; }
+	h1 { line-height: $height; }
+	ul { vertical-align: super; }
+}
+
+body > header h1,
+body > header ul {
+	display: inline-block;
+}
+
+section {
+	overflow: hidden;
+	& + section { margin: 1rem 0 0; }
+	aside, article { float: left; }
+	aside { width: 30%; }
+	article { width: 70%; }
+	article > ul { margin: 0.5rem 0 0; }
+}
+
+/**
+ * Typography
+ */
+
+body {
+	@include font-size( 16px );
+	background: $color-light;
+	color: $color-dark;
+	font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+	@include font-size( 72px );
+	font-weight: 800;
+}
+
+h2 {
+	@include font-size( 36px );
+	color: $color-primary;
+	font-weight: 400;
+	margin: 1rem 0;
+}
+
+h3 {
+	@include font-size( 20px );
+}
+
+ul {
+	list-style-type: none;
+
+	main & {
+		padding-left: 20px;
+
+		li:before {
+			content: "\2014 ";
+			margin-left: -20px;
+		}
+	}
+}
+
+p {
+	@include font-size( 18px );
+}
+
+a {
+	color: $color-primary;
+	&:hover { text-decoration: none; }
+}
+
+em {
+	font-weight: 400;
+	font-style: italic;
+}

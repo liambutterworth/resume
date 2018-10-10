@@ -1,0 +1,23 @@
+/**
+ * Breakpoint
+ */
+
+@import 'assets/styles/variables';
+
+@mixin breakpoint( $point ) {
+	@if $point == small {
+		@media ( min-width: $breakpoint-small ) { @content; }
+	} @else if $point == medium {
+		@media ( min-width: $breakpoint-medium ) { @content; }
+	} @else if  $point == large {
+		@media ( min-width: $breakpoint-large ) { @content; }
+	}
+}
+
+@mixin clearfix() {
+	&::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}

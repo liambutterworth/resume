@@ -1,0 +1,62 @@
+{
+	extends: "airbnb/base",
+	parser:  "babel-eslint",
+
+	parserOptions: {
+		ecmaVersion: 6,
+		sourceType:  "module",
+	},
+
+	env: {
+		node:    true,
+		browser: true,
+	},
+
+	settings: {
+		"import/resolver": {
+			"webpack": { "config": "webpack.config.js" }
+		},
+	},
+
+	rules: {
+		"no-param-reassign":            0,
+		"no-tabs":                      0,
+		"default-case":                 0,
+		"global-require":               0,
+		"max-len":                      0,
+		"no-console":                   0,
+		"no-return-assign":             [ "error", "except-parens" ],
+		"space-in-parens":              [ "warn", "always" ],
+		"template-curly-spacing":       [ "warn", "always" ],
+		"arrow-parens":                 [ "warn", "always" ],
+		"object-shorthand":             [ "warn", "consistent" ],
+		"one-var-declaration-per-line": [ "warn", "initializations" ],
+		"key-spacing":                  [ "warn", { align: "value" } ],
+		"indent":                       [ "error", "tab", { SwitchCase: 1, } ],
+
+		"lines-around-comment": [ "warn", {
+			beforeBlockComment:   true,
+			afterBlockComment:    true,
+			beforeLineComment:    true,
+		}],
+
+		"array-bracket-spacing": [ "warn", "always", {
+			objectsInArrays: false,
+			arraysInArrays:  false,
+		}],
+
+		"no-multi-spaces": [ "warn", {
+			exceptions: {
+				Property:             true,
+				AssignmentExpression: true,
+				VariableDeclarator:   true,
+				ImportDeclaration:    true,
+			}
+		}],
+	
+		"import/no-dynamic-require":         0,
+		"import/newline-after-import":       0,
+		"import/prefer-default-export":      0,
+		"import/no-extraneous-dependencies": [ "error", { devDependencies: true } ],
+	},
+}

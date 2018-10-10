@@ -1,0 +1,12 @@
+/**
+ * Variables
+ */
+
+$color-dark:        #030303;
+$color-light:       #fcfcfc;
+$color-primary:     #921D14;
+$base-font-size:    16px;
+$base-line-height:  1.5;
+$breakpoint-small:  512px;
+$breakpoint-medium: 768px;
+$breakpoint-large:  1024px;
