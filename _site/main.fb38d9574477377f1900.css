@@ -60,9 +60,6 @@ section {
 /**
  * Typography
  */
-html {
-  background: black; }
-
 body {
   font-size: 0.9375rem;
   line-height: 1.6;
