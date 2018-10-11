@@ -105,7 +105,7 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n__webpack_require__(/*! ./index.css */ \"./src/index.css\");\n\nconsole.log('index');\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("\n\n__webpack_require__(/*! ./index.css */ \"./src/index.css\");\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 

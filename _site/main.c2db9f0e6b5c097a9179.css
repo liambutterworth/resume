@@ -41,23 +41,26 @@
 /**
  * Layout
  */
-body > header,
-body > main {
+body {
   width: 1024px;
   margin: 0 auto; }
 
-body > header {
+header {
   height: 100px; }
-  body > header h1, body > header ul {
-    display: inline-block; }
-  body > header h1 {
+  header h1 {
+    display: inline-block;
     line-height: 100px; }
-  body > header ul {
+  header ul {
+    display: inline-block;
     vertical-align: super; }
+    header ul a {
+      line-height: 32px; }
+    header ul img {
+      vertical-align: bottom;
+      margin: 0 0.5rem; }
 
-body > header h1,
-body > header ul {
-  display: inline-block; }
+main {
+  margin-bottom: 2rem; }
 
 section {
   overflow: hidden; }
@@ -75,7 +78,7 @@ section {
 /**
  * Typography
  */
-body {
+html, body {
   font-size: 1rem;
   line-height: 1.5;
   background: #fcfcfc;

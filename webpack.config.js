@@ -38,7 +38,7 @@ module.exports = {
 		}, {
 			test:    /\.(jpg|png)$/,
 			exclude: /node_modules/,
-			use:     'url-loader?limit=8192&name=assets/images/[name].[hash].[ext]',
+			use:     `url-loader?limit=8192&context=${ __dirname }/src&name=assets/images/[name].[hash].[ext]`,
 		}, {
 			test:    /\.(ttf|eot|woff(2)?)$/,
 			exclude: /node_modules/,

@@ -38,23 +38,34 @@
  * Layout
  */
 
-body > header,
-body > main {
+body {
 	width: $breakpoint-large;
 	margin: 0 auto;
 }
 
-body > header {
+header {
 	$height: 100px;
 	height: $height;
-	h1, ul { display: inline-block; }
-	h1 { line-height: $height; }
-	ul { vertical-align: super; }
+
+	h1 {
+		display: inline-block;
+		line-height: $height;
+	}
+
+	ul {
+		display: inline-block;
+		vertical-align: super;
+		a { line-height: 32px; }
+
+		img {
+			vertical-align: bottom;
+			margin: 0 0.5rem;
+		}
+	}
 }
 
-body > header h1,
-body > header ul {
-	display: inline-block;
+main {
+	margin-bottom: 2rem;
 }
 
 section {
@@ -70,7 +81,7 @@ section {
  * Typography
  */
 
-body {
+html, body {
 	@include font-size( 16px );
 	background: $color-light;
 	color: $color-dark;

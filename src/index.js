@@ -1,2 +1,1 @@
-require( './index.css' );
-console.log( 'index' );
+import './index.css';
