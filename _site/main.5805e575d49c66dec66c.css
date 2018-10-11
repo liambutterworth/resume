@@ -2,15 +2,8 @@
  * Resume
  *
  * :: Reset
- * :: Page
  * :: Layout
  * :: Typography
- */
-/**
- * Variables
- */
-/**
- * Breakpoint
  */
 /**
  * Variables
@@ -32,86 +25,76 @@
     box-sizing: border-box; }
 
 /**
- * Page
- */
-@page {
-  size: 8.5in 11in;
-  margin: 1in; }
-
-/**
  * Layout
  */
 body {
-  width: 1024px;
+  width: 8.5in;
+  height: 11in;
+  padding: 0.25in;
   margin: 0 auto; }
 
-header {
-  height: 100px; }
-  header h1 {
-    display: inline-block;
-    line-height: 100px; }
-  header ul {
-    display: inline-block;
-    vertical-align: super; }
-    header ul a {
-      line-height: 32px; }
-    header ul img {
-      vertical-align: bottom;
-      margin: 0 0.5rem; }
+header h1, header ul {
+  display: inline-block; }
 
-main {
-  margin-bottom: 2rem; }
+header ul a {
+  line-height: 32px; }
+
+header ul img {
+  vertical-align: bottom;
+  margin: 0 0.5rem; }
 
 section {
   overflow: hidden; }
   section + section {
-    margin: 1rem 0 0; }
+    margin: 0.5rem 0 0; }
   section aside, section article {
     float: left; }
   section aside {
     width: 30%; }
+    section aside ul {
+      margin: 0.5rem 0 0; }
   section article {
-    width: 70%; }
-  section article > ul {
-    margin: 0.5rem 0 0; }
+    width: 70%;
+    margin: 0 0 0.5rem; }
 
 /**
  * Typography
  */
-html, body {
-  font-size: 1rem;
-  line-height: 1.5;
+html {
+  background: black; }
+
+body {
+  font-size: 0.9375rem;
+  line-height: 1.6;
   background: #fcfcfc;
   color: #030303;
   font-family: 'Open Sans', sans-serif; }
 
 h1 {
-  font-size: 4.5rem;
-  line-height: 1;
-  font-weight: 800; }
+  font-size: 3.375rem;
+  line-height: 1.33333;
+  font-weight: 800;
+  line-height: 64px;
+  vertical-align: top; }
 
 h2 {
-  font-size: 2.25rem;
-  line-height: 1.33333;
+  font-size: 1.875rem;
+  line-height: 1.6;
   color: #921D14;
   font-weight: 400;
-  margin: 1rem 0; }
+  margin: 0.5rem 0; }
 
 h3 {
-  font-size: 1.25rem;
-  line-height: 1.2; }
+  font-size: 1.125rem;
+  line-height: 1.33333; }
 
 ul {
   list-style-type: none; }
   main ul {
     padding-left: 20px; }
     main ul li:before {
-      content: "\2014   ";
+      content: "\2014\A0";
       margin-left: -20px; }
-
-p {
-  font-size: 1.125rem;
-  line-height: 1.33333; }
 
 a {
   color: #921D14; }

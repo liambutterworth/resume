@@ -2,13 +2,11 @@
  * Resume
  *
  * :: Reset
- * :: Page
  * :: Layout
  * :: Typography
  */
 
 @import 'assets/styles/variables';
-@import 'assets/styles/breakpoint';
 @import 'assets/styles/baseline';
 
 /**
@@ -26,35 +24,20 @@
 }
 
 /**
- * Page
- */
-
-@page {
-	size: 8.5in 11in;
-	margin: 1in;
-}
-
-/**
  * Layout
  */
 
 body {
-	width: $breakpoint-large;
+	width: 8.5in;
+	height: 11in;
+	padding: 0.25in;
 	margin: 0 auto;
 }
 
 header {
-	$height: 100px;
-	height: $height;
-
-	h1 {
-		display: inline-block;
-		line-height: $height;
-	}
+	h1, ul { display: inline-block; }
 
 	ul {
-		display: inline-block;
-		vertical-align: super;
 		a { line-height: 32px; }
 
 		img {
@@ -64,44 +47,53 @@ header {
 	}
 }
 
-main {
-	margin-bottom: 2rem;
-}
-
 section {
 	overflow: hidden;
-	& + section { margin: 1rem 0 0; }
+	& + section { margin: 0.5rem 0 0; }
 	aside, article { float: left; }
-	aside { width: 30%; }
-	article { width: 70%; }
-	article > ul { margin: 0.5rem 0 0; }
+
+	aside {
+		width: 30%;
+		ul { margin: 0.5rem 0 0; }
+	}
+
+	article {
+		width: 70%;
+		margin: 0 0 0.5rem;
+	}
 }
 
 /**
  * Typography
  */
 
-html, body {
-	@include font-size( 16px );
+html {
+	background: black;
+}
+
+body {
+	@include font-size( 15px );
 	background: $color-light;
 	color: $color-dark;
 	font-family: 'Open Sans', sans-serif;
 }
 
 h1 {
-	@include font-size( 72px );
+	@include font-size( 54px );
 	font-weight: 800;
+	line-height: 64px;
+	vertical-align: top;
 }
 
 h2 {
-	@include font-size( 36px );
+	@include font-size( 30px );
 	color: $color-primary;
 	font-weight: 400;
-	margin: 1rem 0;
+	margin: 0.5rem 0;
 }
 
 h3 {
-	@include font-size( 20px );
+	@include font-size( 18px );
 }
 
 ul {
@@ -111,14 +103,10 @@ ul {
 		padding-left: 20px;
 
 		li:before {
-			content: "\2014 ";
+			content: "\2014\a0";
 			margin-left: -20px;
 		}
 	}
-}
-
-p {
-	@include font-size( 18px );
 }
 
 a {
